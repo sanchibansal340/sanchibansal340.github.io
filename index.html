@@ -9,12 +9,6 @@
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
         crossorigin="anonymous">
-
-    <!-- Fontawesome icons -->
-    <!-- <link rel="stylesheet" 
-        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
-        crossorigin="anonymous"> -->
     
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 
@@ -39,22 +33,22 @@
 </head>
 <body>
     <!-- Loader -->
-    <div id="container">
-        <div class="water fixed-bottom"></div>
-    </div>
+    <div id="container"></div>
     <a href="" class="hidden"></a>
-
+    <!-- /Loader -->
 
     <!-- Main page -->
     <div id="page-container">
 
         <!-- Navbar -->
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
-            <a href="index.html" class="navbar-brand m-3">
+            <a class="navbar-brand m-lg-3"
+                href="https://sanchibansal340.github.io" 
+            >
                 Sanchi Bansal
             </a>
             
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            <button class="navbar-toggler mt-n3" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -79,17 +73,19 @@
             <div class="col-md">
 
                 <!-- Home -->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div id="home">
-                            <p class="mb-5">
-                                Hello! <span class="hand-wave">👋</span> 
-                            </p>
-                            <p class="mb-5">
-                                I am <strong>Sanchi Bansal</strong>.
-                                <br>
-                                I am a frontend developer with an eye for efficient and beautiful website.
-                            </p>
+                <section id="home">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="home-content">
+                                <p class="mb-lg-5">
+                                    Hello! <span class="hand-wave">👋</span> 
+                                </p>
+                                <p class="mb-5">
+                                    I am <strong>Sanchi Bansal</strong>.
+                                    <br>
+                                    I am a frontend developer with an eye for efficient and beautiful website.
+                                </p>
+                            </div>
 
                             <div class="social mb-5">
                                 <a href="https://www.github.com/sanchibansal340" target="_blank" class="btn github">
@@ -106,42 +102,56 @@
                                 </a>
                             </div>
 
-                            <div class="buttons mb-5">
+                            <div class="buttons">
                                 <a 
                                     href="mailto:sanchibansal340@gmail.com"
-                                    class="btn mr-5 mb-4 py-2 px-3 font-weight-bold">
+                                    class="btn mr-lg-5 mb-4 py-2 px-3 font-weight-bold draw-border">
                                     Shoot me a Mail
                                 </a>
                                 <a 
-                                    class="btn py-2 mb-4 px-3 font-weight-bold"
+                                    class="btn py-2 mb-4 px-3 font-weight-bold draw-border"
                                     href="./assets/Sanchi-Bansal-Resume.pdf"
                                     target="_blank"
                                     type="application/pdf">
-                                    Resume</a>
+                                    Resume
+                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
                 <!-- About -->
-                <div class="row">
-                    <div class="col-md-8 mx-auto">
-                        <div class="section" id="about">
-                            <h3 class="display-4">About Me</h3>
-                            <div class="col-md-6">
-                                <p class="mb-5">
-                                    I am a third-year undergrad pursuing Computer Science Engineering at 
-                                    HMR Institute of Technology and Management, Delhi.
-                                    <br><br> 
-                                    To make more people aware about the benefits of technology, I like to volunteer for 
-                                    communities that promote diversity in tech like The Girl Code, Girl Up She-United 
-                                    Superposition Delhi, Command Tech and Women Who Code.
-                                    <br><br>
-                                    In my free time, you will find me reading novels, swimming or travelling.
-                                </p>
+                <section id="about">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10">
+                            <div class="about-content row mb-5">
+                                <div class="col-md-3">
+                                    <h3 class="display-4 font-weight-bold">
+                                        About Me
+                                    </h3>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>
+                                        I am currently an undergrad at HMR Institute of 
+                                        Technology and Management, Delhi pursuing 
+                                        Computer Science Engineering. I recently worked with 
+                                        <a href="https://raahee.app/" class="text-dark">
+                                            <strong>Raahee</strong>
+                                        </a>
+                                        as a Web Developer and developed a website to 
+                                        help people suffering from mental health problems.
+                                        <br><br> 
+                                        I have been a part of various communities like The Girl Code, 
+                                        Girl Up She-United, Superposition Delhi, Command Tech and Women Who Code
+                                        to promote diversity in tech. As a part of these communities,
+                                        I have given 10+ hands-on workshop on "Intro to Web Development".
+                                        <br><br>
+                                        In my free time, you will find me reading novels, swimming or travelling.
+                                    </p>
+                                </div>
                             </div>
-
-                            <!-- <div class="skills mb-5">
+    
+                            <div class="skills mb-5">
                                 <a href="https://www.github.com/sanchibansal340" target="_blank" class="btn github">
                                     <ion-icon name="logo-github" class="p-3"></ion-icon>
                                 </a>
@@ -154,10 +164,10 @@
                                 <a href="https://www.medium.com/sanchibansal340" target="_blank" class="btn medium">
                                     <ion-icon name="logo-medium" class="p-3"></ion-icon>
                                 </a>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
                 
             </div>

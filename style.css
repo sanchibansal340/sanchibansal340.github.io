@@ -13,14 +13,10 @@ body{
     height: 100vh;
     width: 100vw;
 }
-.water{
-    height: 25vh;
-    width: 100vw;
-    background-color: rgb(64,224,208);
-}
 #page-container{
     display: none;
 }
+/* ====== Navbar ======= */
 .navbar-brand{
     font-family: 'Sacramento', cursive;
     font-weight: 600;
@@ -39,28 +35,26 @@ body{
 .nav-link{
     transition: border-bottom 0.5s;
 }
-.nav-link:hover{
-    border-bottom: 3.5px solid rgb(64,224,208);
-}
-/* ==================Global============== */
-.section, #home{
-    margin-top: 12em;
+/* ============ Global ========== */
+section{
+    margin-top: 9em;
 }
 .display-4 {
     font-size: 1.75em;
-    color: rgb(57, 167, 156);
+    color: #2980B9;
     overflow-y: hidden;
 }
-.section p{
+section p{
     font-size: 1.25em;
 }
-
-/* ------------Home------------------- */
+/* ----------- Home --------------- */
 #home p{
-    font-size: 2.25em;
+    font-size: 1.75em;
 }
+/* ======= Home Social Icons ======== */
 .social ion-icon {
     font-size: 1.5em;
+    transition: 0.3s;
 }
 .github ion-icon, .medium ion-icon{
     border: 2px solid #212529;
@@ -71,13 +65,62 @@ body{
 .twitter ion-icon{
     background-color: #00acee;
 }
-.buttons .btn{
-    border: 3.5px solid rgb(64,224,208);
-    font-size: 1.35em;
+.social ion-icon:hover{
+    box-shadow: 0 0 4px 0.5px #000;
 }
-
-/* ============ About ============== */
-
+.buttons .btn{
+    font-size: 1.25em;
+}
+/* ========= Home Button Animation ====== */
+.draw-border {
+    box-shadow: inset 0 0 0 3px #2980B9;
+    -webkit-transition: color 0.25s 0.0833333333s;
+    transition: color 0.25s 0.0833333333s;
+    position: relative;
+  }
+  
+  .draw-border::before,
+  .draw-border::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 0rem;
+    height: 0;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .draw-border::before {
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+  }
+  
+  .draw-border::after {
+    border-top-width: 4px;
+    border-right-width: 4px;
+  }
+  
+  .draw-border:hover::before,
+  .draw-border:hover::after {
+    border-color: #fb4b60;
+    -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .draw-border:hover::before {
+    -webkit-transition-delay: 0s, 0s, 0.25s;
+    transition-delay: 0s, 0s, 0.25s;
+  }
+  
+  .draw-border:hover::after {
+    -webkit-transition-delay: 0s, 0.25s, 0s;
+    transition-delay: 0s, 0.25s, 0s;
+  }
+/* ======== About ========== */
 /* ---------- Go to Top Button ------- */
 #goToTop {
     display: none; 
@@ -90,8 +133,8 @@ body{
 #goToTop img{
     transform: rotate(-43deg);
 }
-
-@media (min-width: 360px) {
+/* ====== Acc to screen size ====== */
+@media (min-width: 360px), (max-width: 360px) {
     body{font-size: 10px;}
 }
 @media (min-width: 550px) {
