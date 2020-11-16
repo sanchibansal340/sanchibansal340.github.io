@@ -8,6 +8,7 @@
 body{
     overflow-x: hidden;
     font-family: 'Source Sans Pro', sans-serif;
+    color: #000 !important;
 }
 #container{
     height: 100vh;
@@ -46,6 +47,10 @@ section{
 }
 section p{
     font-size: 1.25em;
+}
+.btn:focus {
+    outline: 0 !important;
+    border: none !important;
 }
 /* ----------- Home --------------- */
 #home p{
@@ -120,7 +125,16 @@ section p{
     -webkit-transition-delay: 0s, 0.25s, 0s;
     transition-delay: 0s, 0.25s, 0s;
   }
-/* ======== About ========== */
+/* -------- Skills ---------- */
+.skill-icon img{
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: 0.5s;
+}
+.skill-icon img:hover{
+    filter: grayscale(0);
+    opacity: 1;
+}
 /* ---------- Go to Top Button ------- */
 #goToTop {
     display: none; 
@@ -134,9 +148,6 @@ section p{
     transform: rotate(-43deg);
 }
 /* ====== Acc to screen size ====== */
-@media (min-width: 360px), (max-width: 360px) {
-    body{font-size: 10px;}
-}
 @media (min-width: 550px) {
     body{font-size: 12px;}
 }
