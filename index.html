@@ -9,338 +9,454 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
         crossorigin="anonymous"
     />
-    <!-- Fontawesom 4.7.0 CSS -->
-    <link rel="stylesheet" 
-        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
-        crossorigin="anonymous"
-    />
+    <!-- Fontawesome 5 JS -->
+    <script
+      src="https://kit.fontawesome.com/1d9b3c3ba8.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="stylesheet" href="animation.css" type="text/css">
+    
     <title>Sanchi Bansal</title>
 </head>
 <body>
-    <!-- Loader -->
-    <div id="container"></div>
-    <a href="" class="hidden"></a>
-    <!-- /Loader -->
-
-    <!-- Main page -->
     <div id="page-container">
 
         <!-- Navbar -->
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
-            <a class="navbar-brand m-lg-3"
-                href="https://sanchibansal340.github.io" 
-            >
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+            <a class="navbar-brand cursive font-weight-bold ml-lg-5 ml-md-0" href="#">
                 Sanchi Bansal
             </a>
             
-            <button class="navbar-toggler mt-n3" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button 
+                class="navbar-toggler" type="button" 
+                data-toggle="collapse" data-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" 
+                aria-label="Toggle navigation"
+            >
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <div class="collapse navbar-collapse justify-content-end mr-3" id="navbarNav">
+            <div 
+                class="collapse navbar-collapse justify-content-end mr-5" 
+                id="navbarNav"
+            >
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link navsize" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link navsize" href="#work">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link navsize" href="#projects">Projects</a>
-                    </li>
+                <li class="nav-item active">
+                    <a class="nav-link mr-5" href="#home">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-5" href="#about">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-5" href="#experience">
+                        Experience
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-5" href="#projects">
+                        Projects
+                    </a>
+                </li>
                 </ul>
             </div>
         </nav>
-        
-        <!-- md-10 column for whole website, sections within that -->
-        <div class="row justify-content-center mx-auto">
-            <div class="col-md">
 
-                <!-- Home -->
-                <div id="home">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6">
-                            <div class="home-content col-md-7">
-                                <p class="mb-lg-5">
-                                    Hi <span class="hand-wave">👋</span> 
-                                </p>
-                                <p class="mb-lg-5 mb-3">
-                                    I am <strong>Sanchi Bansal</strong>.
-                                </p>
-                                <p class="mb-5">
-                                    I am a frontend developer with an eye for beautiful and efficient websites.
-                                </p>
-                            </div>
-
-                            <!-- Social media icons  -->
-                            <div class="social mb-5">
-                                <a href="https://www.github.com/sanchibansal340" target="_blank" class="btn github">
-                                    <ion-icon name="logo-github" class="p-3"></ion-icon>
-                                </a>
-                                <a href="https://www.linkedin.com/in/sanchibansal340" target="_blank" class="btn linkedin">
-                                    <ion-icon name="logo-linkedin" class="p-3 text-white"></ion-icon>
-                                </a>
-                                <a href="https://www.twitter.com/sanchibansal340" target="_blank" class="btn twitter">
-                                    <ion-icon name="logo-twitter" class="p-3 text-white"></ion-icon>
-                                </a>
-                                <a href="https://www.medium.com/@sanchibansal340" target="_blank" class="btn medium">
-                                    <ion-icon name="logo-medium" class="p-3"></ion-icon>
-                                </a>
-                            </div>
-
-                            <!-- Quick Reach Buttons -->
-                            <div class="buttons">
-                                <a 
-                                    href="mailto:sanchibansal340@gmail.com"
-                                    class="btn mr-5 py-2 px-3 font-weight-bold draw-border">
-                                    Shoot me a Mail
-                                </a>
-                                <a 
-                                    class="btn py-2 px-3 font-weight-bold draw-border"
-                                    href="./assets/Sanchi-Bansal-Resume.pdf"
-                                    target="_blank"
-                                    type="application/pdf">
-                                    Resume
-                                </a>
-                            </div>
+        <!-- Home Section -->
+        <section id="home" class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-3">
+                    <img 
+                        src="./assets/images/me.jpg" 
+                        alt="Sanchi Bansal"
+                        class="img-fluid border" 
+                    />
+                </div>
+                
+                <div class="col-2"></div>
+                
+                <div class="col-lg-6 col-md-12 my-auto">
+                    <div class="home-content">
+                        <p style="font-size: 1.3em;">
+                            Hello! I am 
+                        </p>
+                        <div class="cursive main-color font-weight-bold name"
+                        >
+                            Sanchi Bansal
                         </div>
-                        <div class="col-md-3">
-                            <img 
-                                src="https://user-images.githubusercontent.com/51092036/100325223-559ce680-2fee-11eb-8a78-8bc88c62bb1a.jpg" 
-                                alt="Sanchi Bansal" class="img-fluid mt-md-5 border border-dark" 
-                                width="300" height="300"
-                            />
+                        <p style="font-size: 1.65em;">
+                            Full-stack Web Developer | CSE Student 
+                        </p>
+                    </div>
+
+                    <div class="home-links" style="margin-top: 3em;">
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/sanchibansal340" 
+                            target="_blank" class="mr-4"
+                            >
+                                [Linkedin]
+                            </a>
+                            <a href="https://github.com/sanchibansal340" 
+                                target="_blank" class="mr-4"
+                            >
+                                [GitHub]
+                            </a>
+                            <a href="https://medium.com/@sanchibansal340" 
+                                target="_blank" class="mr-4"
+                            >
+                                [Medium]
+                            </a>
+                            <a href="https://twitter.com/SanchiBansal340" 
+                                target="_blank" class="mr-4"
+                            >
+                                [Twitter]
+                            </a>
                         </div>
+                        <p class="mail">
+                            Connect with me on 
+                            <a href="mailto:sanchibansal340@gmail.com" class="main-color">sanchibansal340@gmail.com</a>
+                        </p>
                     </div>
                 </div>
-
-                <!-- About -->
-                <section id="about">
-                    <div class="row justify-content-center mx-auto">
-                        <div class="col-md-10">
-                            <div class="about-content row mb-5">
-                                <div class="col-md-3">
-                                    <h3 class="display-4 font-weight-bold">
-                                        About Me
-                                    </h3>
-                                </div>
-                                <div class="col-md-8 col-10 about-text">
-                                    <p>
-                                        I am currently an undergrad at <strong>HMRITM, Delhi</strong>
-                                        (affiliated to GGSIPU) pursuing 
-                                        Computer Science Engineering. I like to make websites that are
-                                        beautiful and efficient. I recently worked with 
-                                        <a href="https://raahee.app/" class="text-dark">
-                                            <strong><u>Raahee</u></strong>
-                                        </a> as
-                                        a Web Developer to help people suffering from mental health problems.
-                                        <br><br> 
-                                        I have been a part of various communities like 
-                                        <strong>
-                                            The Girl Code, Girl Up She-United and Women Who Code
-                                        </strong> to promote diversity in tech. As a part of these communities,
-                                        <strong> 
-                                            I have given 10+ hands-on workshop on "Intro to Web Development"
-                                        </strong>.
-                                        <br><br>
-                                        In my free time, you will find me reading novels, swimming or travelling.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Skills --> <!-- TODO: Add 2 more skills and make col-md-8 -->
-                <section id="skills">
-                    <div class="row justify-content-center mx-auto">
-                        <div class="col-md-10">
-                            <div class="row mb-5">
-                                <div class="col-md-3">
-                                    <h3 class="display-4 font-weight-bold">
-                                        Skills
-                                    </h3>
-                                </div>
-                                <div class="col-md-8 col-12 skill-icon">
-                                    <!-- JavaScript -->
-                                    <img title="Javascript(ES6)" class="img-fluid mr-md-5 mr-4 mb-3"
-                                        src="https://img.icons8.com/color/70/000000/javascript.png"/>
-                                    <!-- C++ -->
-                                    <img title="C++" class="img-fluid mr-md-5 mr-4 mb-3"
-                                        src="https://img.icons8.com/color/67/000000/c-plus-plus-logo.png"/>
-                                    <!-- React -->
-                                    <img title="React" class="img-fluid mr-md-5 mr-4 mb-3" 
-                                        src="./assets/images/react.png" alt="">
-                                    <!-- HTML5 -->
-                                    <img title="HTML5" class="img-fluid mr-md-5 mr-4 mb-3"
-                                        src="https://img.icons8.com/color/70/000000/html-5.png"/>
-                                    <!-- CSS3 -->
-                                    <img title="CSS3" class="img-fluid mr-md-5 mr-4 mb-3"
-                                        src="https://img.icons8.com/color/70/000000/css3.png"/>
-                                    <!-- Sass -->
-                                    <img title="Sass" class="img-fluid mr-md-5 mr-4 mb-3"
-                                        src="https://img.icons8.com/color/70/000000/sass.png"/>
-                                    <!-- Bootstrap -->
-                                    <img title="Bootstrap" class="img-fluid mr-md-5 mr-4 mb-3"
-                                        src="https://img.icons8.com/color/70/000000/bootstrap.png"/>
-                                    <!-- MySQL -->
-                                    <img title="MySQL" class="img-fluid mr-md-5 mr-4 mb-3"
-                                        src="https://img.icons8.com/ios-filled/70/000000/mysql-logo.png"/>
-                                    <!-- Node.JS -->
-                                    <img title="Node JS" class="img-fluid mr-md-5 mr-4 mb-3"
-                                        src="https://img.icons8.com/color/70/000000/nodejs.png"/>
-                                    <!-- MongoDB -->
-                                    <img title="MongoDB" class="img-fluid mr-md-5 mr-4 mb-3 ml-2"
-                                        src="./assets/images/mongodb.png" height="70" width="40"/>
-                                    <!-- Figma -->
-                                    <img title="Figma" class="img-fluid mr-md-5 mr-4 mb-3 ml-4" 
-                                        src="./assets/images/figma.png" alt="">
-                                    <!-- GitHub -->
-                                    <img title="GitHub" class="img-fluid mr-md-5 mr-4 mb-3"
-                                    src="https://img.icons8.com/fluent/70/000000/github.png"/>                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Experience - Timeline section - Raahee, Insolvers, Cooking with a Conscience, DSC WOW -->
-                <!-- Projects - Break On, Cooking with a Conscience, DSC WOW, Raahee, Animal Care -->
-                <section id="projects">
-                    <div class="row justify-content-center mx-auto">
-                        <div class="col-md-10">
-                            <div class="about-content row mb-5">
-                                <div class="col-md-3">
-                                    <h3 class="display-4 font-weight-bold">
-                                        Projects
-                                    </h3>
-                                </div>
-                                <div class="col-md-8 col-10">
-                                    <div class="card">
-                                        <div class="card-img-top">
-                                            <img src="./assets/images/break-on.png" 
-                                                alt="Break On Project" class="img-fluid"
-                                                height="auto"
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>  
-                </section>
             </div>
-        </div>
+        </section>
 
-        <!-- Footer -->
-        <footer class="bg-dark page-footer">
-            <div class="container-fluid mt-4">
-                <div class="row justify-content-center">
-                    <ul class="social-icons list-inline">
-                        <li class="list-inline-item mr-2">
-                            <a target="_blank"
-                                href="https://www.linkedin.com/in/sanchibansal340">
-                            <i class="fa fa-linkedin text-white"></i>
-                        </a>
+        <!-- About Section -->
+        <section id="about" class="container pb-5">
+
+            <!-- About Me  -->
+            <div class="row justify-content-center mx-auto pb-5">
+                <div class="col-md-4 my-lg-auto">
+                    <div class="display-4 main-color cursive">
+                        About Me
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="about-content">
+                        I am a pre-final year student at 
+                        <span class="text-white">HMRITM</span> 
+                        (affiliated to GGSIPU) studying Computer Science and Engineering. 
+                        I have a passion for 
+                        <span class="text-white">Web Development</span> 
+                        and you will usually find me with my PC coding one or another website. 
+                        
+                        <br /><br />
+                                                
+                        Currently, I am working at 
+                        <a href="https://raahee.in/" target="_blank" class="text-white">Raahee</a> 
+                        as a Software Engineer to develop a website which can work as 
+                        an emotional balm for people facing mental health issues. 
+                        
+                        <br /><br />
+                        
+                        I love helping out with non-profit organisations that
+                        work towards uplifting the underrepresented communities.
+                        I have been a part of 
+                        <span class="text-white">
+                            The Girl Code, Girl Up She-United, Cooking with a Conscience
+                        </span> and a few more.
+                    </div>
+                    <a href="./assets/Sanchi-Bansal-Resume.pdf"
+                        class="btn resume-btn text-light rounded-0 shadow mt-4 px-4"
+                    >
+                        View my Resume &#8594;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Skills  -->
+            <div class="row justify-content-center mx-auto mt-5 pb-5">
+                <div class="col-md-4 my-lg-auto">
+                    <div class="display-4 main-color cursive">
+                        Skills
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="skills-content">
+                        <p class="mb-2">
+                            <u>Frontend</u> - HTML, CSS, Bootstrap, JavaScript, React
+                        </p>
+                        <p class="mb-2">
+                            <u>Backend</u> - NodeJS, ExpressJS, MongoDB, MySQL
+                        </p>
+                        <p class="mb-2">
+                            <u>Programming Languages</u> - C, C++
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="container py-5">
+            <div class="display-4 main-color cursive">
+                Experience
+            </div>
+            <p class="text-muted mt-3">Click on each job to know more about it.</p>
+            
+            <!--  Raahee  -->
+            <div class="row justify-content-center mx-auto mt-3 accordion" id="experience-section">
+                <div 
+                    class="card p-3 rounded shadow"
+                >
+                    <div class="card-content row justify-content-between job-head"
+                        data-toggle="collapse" data-target="#raahee-info" 
+                        aria-expanded="false" aria-controls="raahee-info"
+                    >
+                        <div class="col-lg-1"></div>
+                        <h5 class="company-name col-lg-4 col-md-10 my-auto font-weight-bold">
+                            Raahee
+                        </h5>
+                        <div class="col-lg-1"></div>
+                        <div class="position col-lg-6 col-md-12">
+                            Software Engineer (Web Developer)
+                            <br>
+                            June 2020 - Present
+                        </div>
+                    </div>
+
+                    <ul class="collapse mt-4 container job-desc" id="raahee-info">
+                        <li>
+                            Built website using React and Firebase to aid people 
+                            in achieving better mental hygiene.
                         </li>
-                        <li class="list-inline-item mr-2">
-                            <a target="_blank"
-                                href="https://www.github.com/sanchibansal340">
-                            <i class="fa fa-github text-white"></i>
-                        </a>
+                        <li>
+                            Designed features that increased the website traffic by 70%.
                         </li>
-                        <li class="list-inline-item mr-2">
-                            <a target="_blank"
-                                href="https://www.twitter.com/SanchiBansal340">
-                            <i class="fa fa-twitter text-white"></i>
-                        </a>
+                        <li>
+                            Implemented the feature of forum using React to ensure 
+                            safe and better community interaction.
                         </li>
-                        <li class="list-inline-item mr-2">
-                            <a target="_blank"
-                                href="https://www.medium.com/@sanchibansal340">
-                            <i class="fa fa-medium text-white"></i>
-                        </a>
+                        <li>
+                            Created the worry-tree feature to find effective ways to 
+                            handle stress by answering a few questions. 
                         </li>
                     </ul>
                 </div>
-                <div class="row footer-copyright justify-content-center mx-auto">
-                    <p class="text-white">
-                        Copyright &copy; 2020 | Made with <span class="text-danger">&#10084;</span> by Sanchi Bansal
-                    </p>
+            </div>
+
+            <!--  TGC  -->
+            <div class="row justify-content-center mx-auto mt-3">
+                <div class="card p-3 rounded shadow">
+                    <div class="card-content row justify-content-between job-head"
+                        data-toggle="collapse" data-target="#tgc-info" 
+                        aria-expanded="false" aria-controls="tgc-info"
+                    >
+                        <div class="col-lg-1"></div>
+                        <h5 class="company-name col-lg-4 col-md-10 my-auto font-weight-bold">
+                            The Girl Code
+                        </h5>
+                        <div class="col-lg-1"></div>
+                        <div class="position col-lg-6 col-md-12">
+                            Lead (Delhi Chapter)
+                            <br>
+                            March 2020 - Present
+                        </div>
+                    </div>
+
+                    <ul class="collapse mt-4 container job-desc" id="tgc-info">
+                        <li>
+                            Mentored 60+ participants in HTML, CSS and Python 
+                            in 5+ online workshop. 
+                        </li>
+                        <li>
+                            Maintained the frontend of the organization’s website.
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </footer>
-       
-        <div class="row">
-            <div class="col-md">
-                <!-- Go to top button -->
-                <button class="btn" onclick="topFunction()" id="goToTop" title="Go to top">
-                    <img src="./assets/images/startup.png" class="py-2" alt="Go To Top">
-                </button>
+
+            <!-- DSC HMRITM  -->
+            <div class="row justify-content-center mx-auto mt-3">
+                <div class="card p-3 rounded shadow">
+                    
+                    <div class="card-content row justify-content-between job-head"
+                        data-toggle="collapse" data-target="#dsc-info" 
+                        aria-expanded="false" aria-controls="dsc-info"
+                    >
+                        <div class="col-lg-1"></div>
+                        <h5 class="company-name col-lg-4 col-md-10 my-auto font-weight-bold">
+                            DSC HMRITM
+                        </h5>
+                        <div class="col-lg-1"></div>
+                        <div class="position col-lg-6 col-md-12">
+                            Lead
+                            <br>
+                            August 2020 - Present
+                        </div>
+                    </div>
+
+                    <ul class="collapse mt-4 container job-desc" id="dsc-info">
+                        <li>
+                            Guided 150+ students in project-based workshops 
+                            about Git, Kotlin and Technical Writing.
+                        </li>
+                        <li>
+                            Led and conducted 7 workshops, study jams and 
+                            collaborative events.
+                        </li>
+                        <li>
+                            Developed website using React for DSC WOW, a 
+                            collaborative hackathon by 120+ DSCs of India.
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
+            <!-- Digisoft -->
+            <div class="row justify-content-center mx-auto mt-3">
+                <div class="card p-3 rounded shadow">
+                    
+                    <div class="card-content row justify-content-lg-between job-head"
+                        data-toggle="collapse" data-target="#digisoft-info" 
+                        aria-expanded="false" aria-controls="digisoft-info"
+                    >
+                        <div class="col-lg-1"></div>
+                        <h5 class="company-name col-lg-4 col-md-10 my-auto font-weight-bold">
+                            Digisoft
+                        </h5>
+                        <div class="col-lg-1"></div>
+                        <div class="position col-lg-6 col-md-12">
+                            Software Engineering Intern
+                            <br>
+                            June - July 2019
+                        </div>
+                    </div>
 
+                    <ul class="collapse mt-4 container job-desc" id="digisoft-info">
+                        <li>
+                            Designed a database to collect the information of 
+                            clients using MySQL.
+                        </li>
+                        <li>
+                            Reduced information duplication and made addition of 
+                            clients’ information easier by 30%.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
+        <!-- Projects Section -->
+        <section id="projects" class="container my-5 py-5">
+            <div class="display-4 main-color cursive">
+                Projects
+            </div>
+            
+            <!-- Blogg.er -->
+            <div class="card mt-3 py-5 shadow-lg">
+                <div class="row justify-content-center mx-auto">
+                    <div class="col-lg-5">
+                        <img src="./assets/images/blogger.png" alt="Raahee" class="img-fluid">
+                    </div>
+                    <div class="col-lg-6 col-md-12 my-auto">
+                        <div class="row justify-content-between space-above">
+                            <div class="col-lg-6 col-md-4">
+                                <h4 class="project-name font-weight-bold">
+                                    Blogg.er
+                                </h4>
+                            </div>
+                            <!-- col-lg-3 col-md-4 -->
+                            <div class="col-lg-2 col-md-3">
+                                <a href="https://github.com/sanchibansal340/blogg.er" class="btn">
+                                    <i class="fab fa-github mt-n5"></i>
+                                </a>
+                                <!-- <a href="" class="btn">
+                                    <i class="fas fa-external-link-alt mt-n5"></i>
+                                </a> -->
+                            </div>
+                        </div>
+                        <p class="mt-4 project-info">
+                            Online blogging application where users can read, write, 
+                            edit and delete blogs easily.
+                        </p>
+                        <div class="row justify-content-lg-between justify-content-md-center mx-auto tags">
+                            <p class="border px-3">
+                                React
+                            </p>
+                            <p class="border px-3">
+                                Redux
+                            </p>
+                            <p class="border px-3">
+                                Node.js
+                            </p>
+                            <p class="border px-3">
+                                ExpressJS
+                            </p>
+                            <p class="border px-3">
+                                MongoDB
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+        </section>
 
+        <footer class="container-fluid py-5">
+            <div class="row justify-content-center mx-auto">
+                <p>
+                    Created 🎨 by Sanchi Bansal
+                </p>
+            </div>
+            <div class="row justify-content-center mx-auto">
+                <a href="https://www.linkedin.com/in/sanchibansal340" 
+                    target="_blank" class="mr-4"
+                >
+                    Linkedin
+                </a>
+                <a href="https://github.com/sanchibansal340" 
+                    target="_blank" class="mr-4"
+                >
+                    GitHub
+                </a>
+                <a href="https://medium.com/@sanchibansal340" 
+                    target="_blank" class="mr-4"
+                >
+                    Medium
+                </a>
+                <a href="https://twitter.com/SanchiBansal340" 
+                    target="_blank" class="mr-4"
+                >
+                    Twitter
+                </a>
+            </div>
+        </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!-- Go to top button -->
+        <button class="btn border" onclick="topFunction()" id="goToTop" title="Go to top">
+            <img src="./assets/images/startup.png" class="py-2" alt="Go To Top">
+        </button>
     </div>
+
+
+
     <!-- Bootstrap JS -->
     <!-- JQuery -->
     <script 
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" 
         integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" 
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"
+    ></script>
     <script 
         src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" 
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"
+    ></script>
     <script 
         src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" 
         integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" 
-        crossorigin="anonymous"></script>
-    <!-- Vara JS -->
-    <script 
-        src="https://rawcdn.githack.com/akzhy/Vara/16e30acca2872212e28735cfdbaba696a355c780/src/vara.min.js"></script>  
-    <!-- IonIcons -->
-    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>  
+        crossorigin="anonymous"
+    ></script>
     <!-- Custom JS -->
     <script src="main.js"></script>
 </body>
