@@ -1,88 +1,111 @@
 *{
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
     scroll-behavior: smooth;
-    /* All sizings in em to change according to screen size */
 }
 body{
-    overflow-x: hidden;
     font-family: 'Source Sans Pro', sans-serif;
     color: #000 !important;
 }
-#container{
-    height: 100vh;
-    width: 100vw;
+#page-container:not(.navbar) {
+    background-color: #14132B;
+    color: #c5c5c5;
 }
-#page-container{
-    display: none;
+.main-color {
+    color: #F3A837;
+    letter-spacing: 1.25px;
 }
-/* ====== Navbar ======= */
-.navbar-brand{
+.cursive{
     font-family: 'Sacramento', cursive;
-    font-weight: 600;
-    font-size: 2.2em;
-    word-spacing: 8px;
 }
-.navbar-toggler-icon{
-    font-size: 12px;
-    outline: none !important;
-    border: none;
-}
-.nav-item{
-    margin-right: 1.5rem;
-    font-size: 20px;
-}
-.nav-link{
-    transition: border-bottom 0.5s;
-}
-.bg-blue{
-    background-color: #2980B9;
-}
-/* ============ Global ========== */
-section{margin-bottom: 9em;}
 .display-4 {
-    font-size: 1.75em;
-    color: #2980B9;
-    overflow-y: hidden;
+    font-size: 2.65em;
 }
-section p{
+/* ---------- Navbar -------------*/
+.navbar-brand {
+    font-size: 2em;
+}
+.nav-link {
     font-size: 1.25em;
 }
-.btn:focus {
-    outline: 0 !important;
-    border: none !important;
+/* ---------- Home -------------*/
+#home {
+    height: 85vh;
+    margin-top: 4em;
+    transform: translateY(20%);
 }
-/* ----------- Home --------------- */
-#home{
-    height: 100vh;
-    margin-top: 9em;
+.name {
+    font-size: 4.5em;
 }
-#home p{
-    font-size: 1.65em;
+#home a {
+    text-decoration: none;
 }
-#home img{
-    display: none;
+.social a {
+    color: #929191;
+    font-size: 1.35rem;
 }
-/* ======= Home Social Icons ======== */
-.social ion-icon {
-    font-size: 1.5em;
-    transition: 0.3s;
+.social a:hover {
+    color: white;
 }
-.github ion-icon, .medium ion-icon{
-    border: 2px solid #212529;
+.mail{
+    font-size: 1.2rem;
 }
-.linkedin ion-icon{
-    background-color: #0e76a8;
+.mail a:hover {
+    color: #F3A837;
+    border-bottom: 2px solid #F3A837;
 }
-.twitter ion-icon{
-    background-color: #00acee;
+/* ---------- About -------------*/
+.about-content {
+    color: #929191;
 }
-.social ion-icon:hover{
-    box-shadow: 0 0 4px 0.5px #000;
+.about-content,
+.skills-content {
+    font-size: 1.15rem;
 }
-.buttons .btn{
-    font-size: 1.25em;
+.resume-btn {
+    background-color: #0E0D4B;
+    font-size: 1.35em;
+}
+/* ---------- Experience -------------*/
+.job-head {
+    cursor: pointer;
+}
+#experience .card,
+#projects .card {
+    background-color: #0F0F37;
+    min-width: 100% !important;
+}
+#experience .position {
+    font-size: 1.15em;
+}
+.company-name, 
+.project-name {
+    font-family: 'Quicksand', sans-serif;
+}
+/* ---------- Projects -------------*/
+#projects .btn i {
+    color: white;
+}
+#projects .btn .fab {
+    font-size: 1.8rem;
+}
+#projects .btn .fas {
+    font-size: 1.5rem;
+}
+.project-info {
+    font-size: 1.2rem;
+}
+.tags .border {
+    border-color: #3D3C70 !important;
+}
+/*---------- Footer --------------*/
+footer p,
+footer a {
+    font-size: 1.2rem;
+}
+footer a:hover {
+    text-decoration: none;
+    color: white;
 }
 /* ---------- Go to Top Button ------- */
 #goToTop {
@@ -96,29 +119,47 @@ section p{
 #goToTop img{
     transform: rotate(-43deg);
 }
+
 /* ====== Acc to screen size ====== */
 @media (min-width: 550px) {
-    body{font-size: 12px;}
+    #home{font-size: 12px;}
 }
 @media (min-width: 768px) {
-    body{font-size: 14px;}
     #home img{display: block;}
 }
-@media (min-width: 1024px) {
-    body{font-size: 16px;}
+@media (min-width: 992px) {
+    #home{font-size: 16px;}
+    .job-desc {margin-left: 6rem;}
 }
-/* ---- Specific rules ---- */
-@media (max-width: 500px){
-    #home{margin-top: 5em;}
+
+/* -------- Specific --------- */
+@media (max-width: 390px) {
+    .name {font-size: 2.5em;}
 }
-@media (min-width: 370px) and (min-height: 730px){
-    #home{margin-top: 10em;}
-    section{margin-bottom: 5em;}
+@media (max-width: 600px) and (min-width: 391px) {
+    .name {font-size: 3.5em;}
 }
-@media (min-width: 700px) and (max-width: 1100px){
-    .home-content p{margin-bottom: 2em !important;}
-    .social{margin: 7em 0 !important;}
+@media (max-width: 992px) {
+    #home img {
+        display: none;
+    }
+    .company-name {
+        padding-bottom: 1rem;
+    }
+    .tags p {
+        margin-right: 1rem;
+    }
+    .space-above {
+        margin-top: 3rem;
+    }
 }
-@media(max-width: 300px){
-    .navbar-brand{font-size: 1.25rem;}
+@media (max-width: 1100px) and (min-width: 451px) {
+    #home {
+        transform: translateY(30%);
+    }
+}
+@media (max-width: 450px) {
+    #home {
+        transform: translateY(0%);
+    }
 }
