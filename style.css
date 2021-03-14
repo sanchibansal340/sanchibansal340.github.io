@@ -30,12 +30,12 @@ body{
 }
 /* ---------- Home -------------*/
 #home {
-    height: 85vh;
+    height: 100vh;
     margin-top: 4em;
     transform: translateY(20%);
 }
 .name {
-    font-size: 4.5em;
+    font-size: 4.2em;
 }
 #home a {
     text-decoration: none;
@@ -74,6 +74,7 @@ body{
 #projects .card {
     background-color: #0F0F37;
     min-width: 100% !important;
+    border-radius: 2rem;
 }
 #experience .position {
     font-size: 1.15em;
@@ -81,6 +82,10 @@ body{
 .company-name, 
 .project-name {
     font-family: 'Quicksand', sans-serif;
+}
+.job-desc { 
+    font-size: 1.1rem; 
+    color: #929191;
 }
 /* ---------- Projects -------------*/
 #projects .btn i {
@@ -99,6 +104,7 @@ body{
     border-color: #3D3C70 !important;
 }
 /*---------- Footer --------------*/
+footer { background-color: #100f25; }
 footer p,
 footer a {
     font-size: 1.2rem;
@@ -160,6 +166,6 @@ footer a:hover {
 }
 @media (max-width: 450px) {
     #home {
-        transform: translateY(0%);
+        transform: translateY(7%);
     }
 }
