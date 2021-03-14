@@ -88,6 +88,9 @@ body{
     color: #929191;
 }
 /* ---------- Projects -------------*/
+.project-img {
+    border-radius: 1.2rem;
+}
 #projects .btn i {
     color: white;
 }
