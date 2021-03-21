@@ -166,6 +166,10 @@ footer a:hover {
     #home {
         transform: translateY(30%);
     }
+
+    #goToTop img {
+        font-size: 0.75rem;
+    }
 }
 @media (max-width: 450px) {
     #home {
