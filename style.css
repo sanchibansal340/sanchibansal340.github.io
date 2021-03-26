@@ -21,6 +21,14 @@ body{
 .display-4 {
     font-size: 2.65em;
 }
+.viewMore-btn {
+    font-size: 1.2em;
+    background-color: #0F0F37;
+    transition: 0.4s;
+}
+.viewMore-btn:hover {
+    transform: translateY(-10px);
+}
 /* ---------- Navbar -------------*/
 .navbar-brand {
     font-size: 2em;
@@ -62,10 +70,7 @@ body{
 .skills-content {
     font-size: 1.15rem;
 }
-.resume-btn {
-    background-color: #0E0D4B;
-    font-size: 1.35em;
-}
+
 /* ---------- Experience -------------*/
 .job-head {
     cursor: pointer;
