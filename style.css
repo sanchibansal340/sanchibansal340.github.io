@@ -64,7 +64,7 @@ body{
 }
 /* ---------- About -------------*/
 .about-content {
-    color: #929191;
+    color: #a3a1a1;
 }
 .about-content,
 .skills-content {
@@ -90,7 +90,7 @@ body{
 }
 .job-desc { 
     font-size: 1.1rem; 
-    color: #929191;
+    color: #b8b7b7;
 }
 /* ---------- Projects -------------*/
 .project-img {
