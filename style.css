@@ -42,6 +42,9 @@ body{
     margin-top: 4em;
     transform: translateY(20%);
 }
+.img-me {
+    box-shadow: 0.7rem 0.7rem #f3a837;
+}
 .name {
     font-size: 4.2em;
 }
