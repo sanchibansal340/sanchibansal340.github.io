@@ -7,12 +7,12 @@ body{
     font-family: 'Source Sans Pro', sans-serif;
     color: #000 !important;
 }
-#page-container:not(.navbar) {
+#page-container {
     background-color: #14132B;
     color: #c5c5c5;
 }
 .main-color {
-    color: #F3A837;
+    color: #F3A837 !important;
     letter-spacing: 1.25px;
 }
 .cursive{
@@ -21,20 +21,24 @@ body{
 .display-4 {
     font-size: 2.65em;
 }
-.viewMore-btn {
-    font-size: 1.2em;
-    background-color: #0F0F37;
-    transition: 0.4s;
-}
-.viewMore-btn:hover {
-    transform: translateY(-10px);
-}
+#home, #about, #experience, #projects {
+    scroll-margin-top: 60px;
+  }
 /* ---------- Navbar -------------*/
 .navbar-brand {
     font-size: 2em;
 }
 .nav-link {
     font-size: 1.25em;
+}
+.bg-dark {
+    background-color: #14132B !important;
+}
+.link a {
+    color: #929191 !important;
+}
+.link a:hover {
+    color: white !important;
 }
 /* ---------- Home -------------*/
 #home {
@@ -52,11 +56,7 @@ body{
     text-decoration: none;
 }
 .social a {
-    color: #929191;
     font-size: 1.35rem;
-}
-.social a:hover {
-    color: white;
 }
 .mail{
     font-size: 1.2rem;
@@ -113,6 +113,14 @@ body{
 }
 .tags .border {
     border-color: #3D3C70 !important;
+}
+.viewMore-btn {
+    font-size: 1.2em;
+    background-color: #0F0F37;
+    transition: 0.4s;
+}
+.viewMore-btn:hover {
+    transform: translateY(-10px);
 }
 /*---------- Footer --------------*/
 footer { background-color: #100f25; }
