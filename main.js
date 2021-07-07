@@ -7,7 +7,7 @@ function scrollFunction() {
     } else {
         goToTopBtn.style.display = "none";
     }
-  }
+}
 
 window.onscroll = scrollFunction;
 
@@ -17,6 +17,11 @@ function topFunction() {
 }
 
 // Collapse navbar on navlink click
-$('.navbar-nav>li>a').on('click', function(){
+$('.navbar-nav>li>a').on('click', function () {
     $('.navbar-collapse').collapse('hide');
 });
+
+const handleclick = (e) => {
+    const name = e.target.nextElementSibling.querySelector(".project-name");
+    name.style.color = "#F3A837";
+}
