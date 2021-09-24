@@ -108,6 +108,9 @@ body{
 #projects .btn .fas {
     font-size: 1.5rem;
 }
+#projects .btn:hover{
+    color: #F3A837;
+}
 .project-info {
     font-size: 1.15em;
 }
