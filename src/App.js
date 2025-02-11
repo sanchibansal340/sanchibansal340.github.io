@@ -1,11 +1,15 @@
 import { Landing, About } from './components'
+import theme from './assets/theme'
+import { ThemeProvider } from '@mui/material/styles'
 
 function App() {
     return (
-        <div className="App">
-            <Landing />
-            <About />
-        </div>
+        <ThemeProvider theme={theme}>
+            <div className="App">
+                <Landing />
+                <About />
+            </div>
+        </ThemeProvider>
     )
 }
 

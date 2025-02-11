@@ -19,7 +19,14 @@ const About = () => {
 
             {/* About Me Content */}
             <Container maxWidth="md">
-                <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2 }}>
+                <Typography
+                    variant="h4"
+                    sx={{
+                        fontWeight: 'bold',
+                        mb: 2,
+                        fontFamily: (theme) => theme.typography.fancy,
+                    }}
+                >
                     About Me
                 </Typography>
                 <Typography

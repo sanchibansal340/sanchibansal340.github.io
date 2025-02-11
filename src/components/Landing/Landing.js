@@ -25,7 +25,11 @@ const Landing = () => {
                     </Typography>
                     <Typography
                         variant="h3"
-                        sx={{ fontWeight: 'bold', color: '#55c2a6' }}
+                        sx={{
+                            fontWeight: 'bold',
+                            color: '#55c2a6',
+                            fontFamily: (theme) => theme.typography.fancy,
+                        }}
                     >
                         Sanchi Bansal
                     </Typography>
@@ -45,7 +49,7 @@ const Landing = () => {
                             <a
                                 href={social.url}
                                 style={{
-                                    color: '#55c2a6',
+                                    color: '#4bbea1',
                                     marginRight: '1rem',
                                 }}
                                 target="_blank"
@@ -58,7 +62,7 @@ const Landing = () => {
                             <a
                                 href="mailto:sanchibansal340@gmail.com"
                                 style={{
-                                    color: '#55c2a6',
+                                    color: '#4bbea1',
                                     marginRight: '1rem',
                                 }}
                             >
