@@ -1,0 +1,24 @@
+{
+    "socials": [
+        {
+            "name": "LinkedIn",
+            "alt": "Sanchi Bansal LinkedIn",
+            "url": "https://www.linkedin.com/in/sanchibansal340"
+        },
+        {
+            "name": "GitHub",
+            "alt": "Sanchi Bansal GitHub",
+            "url": "https://github.com/sanchibansal340"
+        },
+        {
+            "name": "Medium",
+            "alt": "Sanchi Bansal Medium",
+            "url": "https://medium.com/@sanchibansal340"
+        },
+        {
+            "name": "Twitter",
+            "alt": "Sanchi Bansal Twitter",
+            "url": "https://twitter.com/SanchiBansal340"
+        }
+    ]
+}
