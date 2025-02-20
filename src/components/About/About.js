@@ -1,22 +1,10 @@
 import React from 'react'
-import { Box, Typography, Container } from '@mui/material'
+import { Box, Typography, Container,useTheme } from '@mui/material'
 
 const About = () => {
+    const theme = useTheme()
     return (
         <Box sx={{ bgcolor: '#55c2a6', textAlign: 'center', py: 8 }}>
-            {/* Top Triangle Shape */}
-            {/* <Box
-        sx={{
-          width: "100%",
-          height: "80px",
-          position: "absolute",
-          top: "-79px",
-          left: 0,
-          clipPath: "polygon(0 100%, 50% 0, 100% 100%)",
-          bgcolor: "#55c2a6",
-        }}
-      /> */}
-
             {/* About Me Content */}
             <Container maxWidth="md">
                 <Typography
@@ -24,7 +12,7 @@ const About = () => {
                     sx={{
                         fontWeight: 'bold',
                         mb: 2,
-                        fontFamily: (theme) => theme.typography.fancy,
+                        fontFamily: theme.typography.fancy,
                     }}
                 >
                     About Me

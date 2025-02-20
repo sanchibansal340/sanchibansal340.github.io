@@ -1,9 +1,10 @@
 import React from 'react'
-import { Box, Typography, Grid2, Avatar } from '@mui/material'
+import { Box, Typography, Grid2, Avatar, useTheme } from '@mui/material'
 import jsonData from './Landing.json'
 import MyPic from '../../assets/my_img.png'
 
 const Landing = () => {
+    const theme = useTheme()
     return (
         <Box
             sx={{
@@ -12,68 +13,77 @@ const Landing = () => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 minHeight: '70vh',
-                textAlign: 'center',
                 position: 'relative',
             }}
         >
             {/* Main Grid2 */}
-            <Grid2 container spacing={3} sx={{ alignItems: 'center' }}>
+            <Grid2 container columnSpacing={12} rowSpacing={6} sx={{ alignItems: 'center', maxWidth: "90%",  mx: "auto", }}>
                 {/* Left Section - Text */}
-                <Grid2 item xs={12} md={5} sx={{ textAlign: 'left' }}>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+                <Grid2 item xs={12} md={5} sx={{mx:'auto'}}>
+                    <Typography variant="h6" sx={{ mb: 1 }}>
                         Hi, I’m
                     </Typography>
                     <Typography
                         variant="h3"
                         sx={{
                             fontWeight: 'bold',
-                            color: '#55c2a6',
-                            fontFamily: (theme) => theme.typography.fancy,
+                            color: 'primary.main',
+                            lineHeight: 1.25,
+                            fontFamily: theme.typography.fancy,
                         }}
                     >
                         Sanchi Bansal
                     </Typography>
                     <Typography
                         variant="body1"
-                        sx={{ mt: 1, fontSize: '1.25rem' }}
+                        sx={{ fontSize: '1.5rem', fontWeight: 'bold' }}
                     >
-                        Turning coffee into code and ideas into reality! 🚀{' '}
-                        <br />
+                        Turning coffee into code and ideas into reality! 🚀
+                    </Typography>
+                    <Typography
+                        variant="body1"
+                        sx={{ mt: 2, fontSize: '1.25rem' }}
+                    >
                         I’m a Software Engineer specializing in all things web,{' '}
                         <br />
                         crafting digital magic with React, Python, and AWS.
                     </Typography>
                     {/* Links */}
-                    <Box sx={{ mt: 3, fontSize: '1.25rem' }}>
-                        {jsonData.socials.map((social) => (
-                            <a
-                                href={social.url}
-                                style={{
-                                    color: '#4bbea1',
-                                    marginRight: '1rem',
-                                }}
-                                target="_blank"
-                            >
-                                &#10100;{social.name}&#10101;
-                            </a>
-                        ))}
-                        <p>
-                            Mail at:{' '}
-                            <a
+                    <Box sx={{ mt: 5, fontSize: '1.25rem' }}>
+                        <span>
+                            {jsonData.socials.map((social) => (
+                                <Box
+                                    component='a'
+                                    key={social.name}    
+                                    href={social.url}
+                                    sx={{
+                                        color: theme.palette.primary.dark,
+                                        textShadow: "0px 0px 10px rgba(85, 194, 166, 0.8)",
+                                        marginRight: '1rem',
+                                        fontWeight: 500
+                                    }}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    &#123;{social.name}&#125;
+                                </Box>
+                            ))}
+                            <br />
+                            Shoot me an email:{' '}
+                            <Box
+                                component='a'
                                 href="mailto:sanchibansal340@gmail.com"
-                                style={{
-                                    color: '#4bbea1',
+                                sx={{
+                                    color: theme.palette.primary.dark,
                                     marginRight: '1rem',
+                                    fontWeight: 500,
                                 }}
                             >
                                 sanchibansal340@gmail.com
-                            </a>
-                        </p>
+                            </Box>
+                        </span>
                     </Box>
                 </Grid2>
-
-                {/* Spacing */}
-                <Grid2 item xs={12} md={2} />
 
                 {/* Right Section - Circular Image */}
                 <Grid2
@@ -82,19 +92,20 @@ const Landing = () => {
                     md={5}
                     display="flex"
                     justifyContent="center"
+                    sx={{mx:'auto'}}
                 >
                     <Box
                         sx={{
                             border: '5px dashed #55c2a6',
                             borderRadius: '50%',
-                            p: 1.25, // Adds space between avatar and border
+                            p: 1.25, 
                             display: 'inline-block',
                         }}
                     >
                         <Avatar
                             src={MyPic}
                             alt="Sanchi Image"
-                            sx={{ width: 160, height: 160 }}
+                            sx={{ width: 200, height: 200 }}
                         />
                     </Box>
                 </Grid2>
