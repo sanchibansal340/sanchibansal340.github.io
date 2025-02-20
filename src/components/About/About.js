@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography, Container,useTheme } from '@mui/material'
+import { Box, Typography, Container, useTheme } from '@mui/material'
 
 const About = () => {
     const theme = useTheme()

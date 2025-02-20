@@ -17,9 +17,14 @@ const Landing = () => {
             }}
         >
             {/* Main Grid2 */}
-            <Grid2 container columnSpacing={12} rowSpacing={6} sx={{ alignItems: 'center', maxWidth: "90%",  mx: "auto", }}>
+            <Grid2
+                container
+                columnSpacing={12}
+                rowSpacing={6}
+                sx={{ alignItems: 'center', maxWidth: '90%', mx: 'auto' }}
+            >
                 {/* Left Section - Text */}
-                <Grid2 item xs={12} md={5} sx={{mx:'auto'}}>
+                <Grid2 item xs={12} md={5} sx={{ mx: 'auto' }}>
                     <Typography variant="h6" sx={{ mb: 1 }}>
                         Hi, I’m
                     </Typography>
@@ -53,14 +58,15 @@ const Landing = () => {
                         <span>
                             {jsonData.socials.map((social) => (
                                 <Box
-                                    component='a'
-                                    key={social.name}    
+                                    component="a"
+                                    key={social.name}
                                     href={social.url}
                                     sx={{
                                         color: theme.palette.primary.dark,
-                                        textShadow: "0px 0px 10px rgba(85, 194, 166, 0.8)",
+                                        textShadow:
+                                            '0px 0px 10px rgba(85, 194, 166, 0.8)',
                                         marginRight: '1rem',
-                                        fontWeight: 500
+                                        fontWeight: 500,
                                     }}
                                     target="_blank"
                                     rel="noreferrer"
@@ -71,7 +77,7 @@ const Landing = () => {
                             <br />
                             Shoot me an email:{' '}
                             <Box
-                                component='a'
+                                component="a"
                                 href="mailto:sanchibansal340@gmail.com"
                                 sx={{
                                     color: theme.palette.primary.dark,
@@ -92,13 +98,13 @@ const Landing = () => {
                     md={5}
                     display="flex"
                     justifyContent="center"
-                    sx={{mx:'auto'}}
+                    sx={{ mx: 'auto' }}
                 >
                     <Box
                         sx={{
                             border: '5px dashed #55c2a6',
                             borderRadius: '50%',
-                            p: 1.25, 
+                            p: 1.25,
                             display: 'inline-block',
                         }}
                     >
