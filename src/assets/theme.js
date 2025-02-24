@@ -13,6 +13,9 @@ const theme = createTheme({
     typography: {
         fontFamily: 'Questrial, serif',
         fancy: 'Cedarville Cursive, serif',
+        button: {
+            textTransform: 'none',
+        },
     },
 })
 

@@ -14,6 +14,7 @@ const Landing = () => {
                 justifyContent: 'center',
                 minHeight: '70vh',
                 position: 'relative',
+                mt: 5,
             }}
         >
             {/* Main Grid2 */}
