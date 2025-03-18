@@ -12,7 +12,7 @@ const Landing = () => {
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
-                minHeight: '70vh',
+                minHeight: '60vh',
                 position: 'relative',
                 mt: 5,
             }}
@@ -76,7 +76,7 @@ const Landing = () => {
                                 </Box>
                             ))}
                             <br />
-                            Shoot me an email:{' '}
+                            Email me at:{' '}
                             <Box
                                 component="a"
                                 href="mailto:sanchibansal340@gmail.com"
