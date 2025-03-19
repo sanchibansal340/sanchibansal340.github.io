@@ -65,9 +65,15 @@ const Landing = () => {
                                     sx={{
                                         color: theme.palette.primary.dark,
                                         textShadow:
-                                            '0px 0px 10px rgba(85, 194, 166, 0.8)',
+                                            '0px 0px 10px rgba(192, 240, 229, 0.8)',
                                         marginRight: '1rem',
                                         fontWeight: 500,
+                                        transition: 'color 0.4s ease',
+                                        '&:hover': {
+                                            color: theme.palette.secondary.main,
+                                            textShadow:
+                                                '0px 0px 10px rgba(240, 216, 192, 0.8)',
+                                        },
                                     }}
                                     target="_blank"
                                     rel="noreferrer"
@@ -84,6 +90,12 @@ const Landing = () => {
                                     color: theme.palette.primary.dark,
                                     marginRight: '1rem',
                                     fontWeight: 500,
+                                    transition: 'color 0.4s ease',
+                                    '&:hover': {
+                                        textDecorationLine: 'underline',
+                                        textUnderlineOffset: '3px',
+                                        color: theme.palette.secondary.main,
+                                    },
                                 }}
                             >
                                 sanchibansal340@gmail.com
@@ -91,7 +103,7 @@ const Landing = () => {
                         </span>
                     </Box>
                 </Grid2>
-
+                {/* <Grid2 xs={1} sx={{ mx: 'auto' }} /> */}
                 {/* Right Section - Circular Image */}
                 <Grid2
                     item

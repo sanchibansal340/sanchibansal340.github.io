@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles'
 
 const NavButton = styled(Button, {
     shouldForwardProp: (prop) => prop !== 'active',
-})(({ active }) => ({
+})(({ active, theme }) => ({
     fontSize: '1rem',
     fontWeight: 'bold',
     color: '#333',
@@ -22,10 +22,10 @@ const NavButton = styled(Button, {
               backgroundPosition: 'bottom',
           }
         : {},
-    transition: 'color 0.2s ease',
+    transition: 'color 0.4s ease',
     '&:hover': {
         backgroundColor: 'inherit',
-        color: '#F29251',
+        color: theme.palette.secondary.main,
     },
 }))
 

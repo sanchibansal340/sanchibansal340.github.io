@@ -3,7 +3,6 @@ import {
     AppBar,
     Toolbar,
     Box,
-    Button,
     IconButton,
     Drawer,
     List,
@@ -14,11 +13,10 @@ import {
     useMediaQuery,
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
-import NavButton from './NavButton'
+import NavButton from '../Buttons/NavButton'
+import ResumeButton from '../Buttons/ResumeButton'
 
-const sections = ['Home', 'About', 'Skills', 'Work', 'Contact']
-
-// Custom Button with zigzag underline on hover/active
+const sections = ['Home', 'About', 'Work', 'Contact', <ResumeButton />]
 
 const Navbar = () => {
     const [activeSection, setActiveSection] = useState('Home')
@@ -30,11 +28,10 @@ const Navbar = () => {
         setActiveSection(section)
         // For mobile, close the drawer after selecting a section
         if (isMobile) setIsDrawerOpen(false)
-        // Optionally: scroll to section or update route here
     }
 
     const renderNavButtons = () =>
-        sections.map((section) => (
+        sections.map((section, index) => (
             <NavButton
                 key={section}
                 active={activeSection === section ? 1 : 0}
