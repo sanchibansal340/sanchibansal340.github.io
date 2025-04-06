@@ -31,17 +31,21 @@ const Navbar = () => {
     }
 
     const renderNavButtons = () =>
-        sections.map((section, index) => (
-            <NavButton
-                key={section}
-                active={activeSection === section ? 1 : 0}
-                onClick={() => handleNavClick(section)}
-                className={activeSection === section ? 'active' : ''}
-                disableRipple
-            >
-                {section}
-            </NavButton>
-        ))
+        sections.map((section) =>
+            typeof section === 'string' ? (
+                <NavButton
+                    key={section}
+                    active={activeSection === section ? 1 : 0}
+                    onClick={() => handleNavClick(section)}
+                    className={activeSection === section ? 'active' : ''}
+                    disableRipple
+                >
+                    {section}
+                </NavButton>
+            ) : (
+                section
+            )
+        )
 
     return (
         <>
@@ -73,9 +77,19 @@ const Navbar = () => {
 
             {/* Drawer for Mobile */}
             <Drawer
-                anchor="top"
+                anchor="right"
                 open={isDrawerOpen}
                 onClose={() => setIsDrawerOpen(false)}
+                PaperProps={{
+                    sx: { width: '65%' },
+                }}
+                ModalProps={{
+                    BackdropProps: {
+                        sx: {
+                            backdropFilter: 'blur(8px)',
+                        },
+                    },
+                }}
             >
                 <Box role="presentation">
                     <Box sx={{ textAlign: 'right', marginRight: 2, mt: 1 }}>
@@ -87,17 +101,33 @@ const Navbar = () => {
                         </IconButton>
                     </Box>
 
-                    <List>
-                        {sections.map((section) => (
-                            <ListItem key={section} disablePadding>
-                                <ListItemButton
-                                    onClick={() => handleNavClick(section)}
-                                >
-                                    <ListItemText primary={section} />
-                                </ListItemButton>
-                            </ListItem>
-                        ))}
-                    </List>
+                    <Box
+                        sx={{
+                            height: '100%',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <List sx={{ alignItems: 'center' }}>
+                            {sections.map((section) => (
+                                <ListItem key={section} disablePadding>
+                                    {typeof section === 'string' ? (
+                                        <ListItemButton
+                                            onClick={() =>
+                                                handleNavClick(section)
+                                            }
+                                        >
+                                            <ListItemText primary={section} />
+                                        </ListItemButton>
+                                    ) : (
+                                        section
+                                    )}
+                                </ListItem>
+                            ))}
+                        </List>
+                    </Box>
                 </Box>
             </Drawer>
         </>
