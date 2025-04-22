@@ -1,6 +1,7 @@
 import { Navbar, Landing, About } from './components'
 import theme from './assets/theme'
 import { ThemeProvider } from '@mui/material/styles'
+import './styles/animations.css'
 
 function App() {
     return (

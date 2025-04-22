@@ -1,2 +1,7 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🎯 Running Prettier..."
 yarn run pretty
+echo "✅ Done. Committing now..."
 git add .

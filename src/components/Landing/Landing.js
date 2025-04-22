@@ -55,19 +55,20 @@ const Landing = () => {
                         crafting digital magic with React, Python, and AWS.
                     </Typography>
                     {/* Links */}
-                    <Box sx={{ mt: 5, fontSize: '1.25rem' }}>
-                        <span>
+                    <Box sx={{ mt: 5, fontSize: '1.25rem', fontWeight: 500 }}>
+                        <Box sx={{ mb: '0.2rem' }}>
                             {jsonData.socials.map((social) => (
-                                <Box
+                                <Typography
+                                    variant="h6"
                                     component="a"
                                     key={social.name}
                                     href={social.url}
                                     sx={{
                                         color: theme.palette.primary.dark,
+
                                         textShadow:
                                             '0px 0px 10px rgba(192, 240, 229, 0.8)',
                                         marginRight: '1rem',
-                                        fontWeight: 500,
                                         transition: 'color 0.4s ease',
                                         '&:hover': {
                                             color: theme.palette.secondary.main,
@@ -79,28 +80,24 @@ const Landing = () => {
                                     rel="noreferrer"
                                 >
                                     &#123;{social.name}&#125;
-                                </Box>
+                                </Typography>
                             ))}
-                            <br />
+                        </Box>
+                        <Typography variant="h6">
                             Email me at:{' '}
                             <Box
                                 component="a"
                                 href="mailto:sanchibansal340@gmail.com"
+                                className="underline-animation"
                                 sx={{
                                     color: theme.palette.primary.dark,
-                                    marginRight: '1rem',
-                                    fontWeight: 500,
-                                    transition: 'color 0.4s ease',
-                                    '&:hover': {
-                                        textDecorationLine: 'underline',
-                                        textUnderlineOffset: '3px',
-                                        color: theme.palette.secondary.main,
-                                    },
+                                    '--underline-animation-color':
+                                        theme.palette.secondary.main,
                                 }}
                             >
                                 sanchibansal340@gmail.com
                             </Box>
-                        </span>
+                        </Typography>
                     </Box>
                 </Grid2>
                 {/* <Grid2 xs={1} sx={{ mx: 'auto' }} /> */}
