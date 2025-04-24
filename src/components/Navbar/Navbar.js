@@ -16,10 +16,10 @@ import MenuIcon from '@mui/icons-material/Menu'
 import NavButton from '../Buttons/NavButton'
 import ResumeButton from '../Buttons/ResumeButton'
 
-const sections = ['Home', 'About', 'Work', 'Contact', <ResumeButton />]
+const sections = ['home', 'about', 'work', 'contact', <ResumeButton />]
 
 const Navbar = () => {
-    const [activeSection, setActiveSection] = useState('Home')
+    const [activeSection, setActiveSection] = useState('home')
     const [isDrawerOpen, setIsDrawerOpen] = useState(false)
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
@@ -81,7 +81,7 @@ const Navbar = () => {
                 open={isDrawerOpen}
                 onClose={() => setIsDrawerOpen(false)}
                 PaperProps={{
-                    sx: { width: '65%' },
+                    sx: { width: '55%' },
                 }}
                 ModalProps={{
                     BackdropProps: {
