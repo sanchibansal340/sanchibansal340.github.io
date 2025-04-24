@@ -20,7 +20,7 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\"",
+        "pretty": "prettier --write \"./**/*.{js,jsx,json,md}\"",
         "prepare": "husky"
     },
     "eslintConfig": {

@@ -1,12 +1,18 @@
 import React from 'react'
 import { Box, Typography, Container, useTheme } from '@mui/material'
+import AboutData from './About.json'
+import { highlightWords } from '../../utils'
 
 const About = () => {
     const theme = useTheme()
     return (
-        <Box sx={{ bgcolor: '#55c2a6', textAlign: 'center', py: 8 }}>
-            {/* About Me Content */}
-            <Container maxWidth="md">
+        <Box sx={{ bgcolor: 'primary.main', py: 8 }}>
+            {/* <Grid2 container direction='row' justifyContent="center"
+                alignItems="center"
+                spacing={4} sx={{mt: 15, maxWidth: '90%', mx: 'auto'}}> */}
+            {/* About Me Heading */}
+            {/* <Grid2 item> */}
+            <Container maxWidth="md" sx={{ pt: 15 }}>
                 <Typography
                     variant="h4"
                     sx={{
@@ -17,16 +23,28 @@ const About = () => {
                 >
                     About Me
                 </Typography>
-                <Typography
-                    variant="body1"
-                    sx={{ maxWidth: '700px', mx: 'auto' }}
-                >
-                    I'm a software engineer passionate about building seamless,
-                    user-friendly web experiences. With expertise in React,
-                    Django, and AWS, I craft scalable applications that bring
-                    ideas to life.
-                </Typography>
+                {/* </Grid2> */}
+                {/* About Me Content */}
+                {/* <Grid2 item> */}
+                {AboutData.aboutContent.map((paragraph, idx) => (
+                    <Box key={idx}>
+                        <Typography
+                            variant="body1"
+                            sx={{
+                                maxWidth: '700px',
+                                mx: 'auto',
+                                fontSize: '1rem',
+                            }}
+                        >
+                            {highlightWords(paragraph)}
+                        </Typography>
+                        <br />
+                        {idx === AboutData.aboutContent.length - 2 && <br />}
+                    </Box>
+                ))}
             </Container>
+            {/* </Grid2> */}
+            {/* </Grid2> */}
         </Box>
     )
 }

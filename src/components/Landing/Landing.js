@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Typography, Grid2, Avatar, useTheme } from '@mui/material'
-import jsonData from './Landing.json'
+import LandingData from './Landing.json'
 import MyPic from '../../assets/my_img.png'
 
 const Landing = () => {
@@ -22,12 +22,21 @@ const Landing = () => {
                 container
                 columnSpacing={12}
                 rowSpacing={6}
-                sx={{ alignItems: 'center', maxWidth: '90%', mx: 'auto' }}
+                alignItems="center"
+                // 800-947 -> width: 100%,  colspacing: 0
+                sx={{
+                    maxWidth: '90%',
+                    mx: 'auto',
+                    '@media (min-width:800px) and (max-width:948px)': {
+                        maxWidth: '100%',
+                        '--Grid-columnSpacing': 0,
+                    },
+                }}
             >
                 {/* Left Section - Text */}
                 <Grid2 item xs={12} md={5} sx={{ mx: 'auto' }}>
                     <Typography variant="h6" sx={{ mb: 1 }}>
-                        Hi, I’m
+                        Hi, I'm
                     </Typography>
                     <Typography
                         variant="h3"
@@ -50,14 +59,14 @@ const Landing = () => {
                         variant="body1"
                         sx={{ mt: 2, fontSize: '1.25rem' }}
                     >
-                        I’m a Software Engineer specializing in all things web,{' '}
+                        I'm a Software Engineer specializing in all things web,{' '}
                         <br />
                         crafting digital magic with React, Python, and AWS.
                     </Typography>
                     {/* Links */}
                     <Box sx={{ mt: 5, fontSize: '1.25rem', fontWeight: 500 }}>
                         <Box sx={{ mb: '0.2rem' }}>
-                            {jsonData.socials.map((social) => (
+                            {LandingData.socials.map((social) => (
                                 <Typography
                                     variant="h6"
                                     component="a"
@@ -83,7 +92,7 @@ const Landing = () => {
                                 </Typography>
                             ))}
                         </Box>
-                        <Typography variant="h6">
+                        <Typography variant="h6" sx={{ lineHeight: 1.2 }}>
                             Email me at:{' '}
                             <Box
                                 component="a"
@@ -130,6 +139,7 @@ const Landing = () => {
             {/* Bottom Section - Background Shape */}
             <Box
                 sx={{
+                    mt: 10,
                     width: '100%',
                     height: '80px',
                     position: 'absolute',

@@ -1,7 +1,9 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+STAGED_FILES=$(git diff --cached --name-only)
 
-echo "🎯 Running Prettier..."
-yarn run pretty
-echo "✅ Done. Committing now..."
-git add .
+if [ "$STAGED_FILES" != "" ]; then
+echo -e "\n\n🎯 Running Prettier..."
+echo "$STAGED_FILES" | xargs yarn run pretty --write
+echo -e "\n\n✅ Done. Committing now..."
+echo "$STAGED_FILES" | xargs git add
+
+fi
