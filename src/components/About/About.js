@@ -33,7 +33,7 @@ const About = () => {
                             sx={{
                                 maxWidth: '700px',
                                 mx: 'auto',
-                                fontSize: '1rem',
+                                fontSize: '1.1rem',
                             }}
                         >
                             {highlightWords(paragraph)}

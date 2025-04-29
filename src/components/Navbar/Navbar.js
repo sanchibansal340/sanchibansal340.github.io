@@ -16,7 +16,14 @@ import MenuIcon from '@mui/icons-material/Menu'
 import NavButton from '../Buttons/NavButton'
 import ResumeButton from '../Buttons/ResumeButton'
 
-const sections = ['home', 'about', 'work', 'contact', <ResumeButton />]
+const sections = [
+    'home',
+    'about',
+    'experience',
+    'work',
+    'contact',
+    <ResumeButton />,
+]
 
 const Navbar = () => {
     const [activeSection, setActiveSection] = useState('home')
