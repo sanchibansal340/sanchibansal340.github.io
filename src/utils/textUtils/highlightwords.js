@@ -5,6 +5,7 @@ function escapeRegExp(str) {
     return String(str).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
 
+// build words to be highlighted based on array or list
 function getHighlightedWords(
     wordType,
     { isArrayData = true, valueFrom = null } = {}
@@ -45,15 +46,12 @@ export function highlightWords(text) {
 
     // Step 1: Replace skip phrases with unique placeholders
     skipWords.forEach((phrase, index) => {
-        const placeholder = `__PLACEHOLDER_${index}__`
+        const placeholder = `@__PLACEHOLDER_${index}__@`
         placeholderMap[placeholder] = phrase
 
         const safeRegex = new RegExp(escapeRegExp(phrase), 'g')
         processedText = processedText.replace(safeRegex, placeholder)
     })
-
-    console.log('processed text', processedText)
-    console.log(placeholderMap)
 
     // Step 2: Build regex only from boldWords that are not part of skip/link phrases
     const filteredBoldWords = boldWords.filter(
@@ -68,19 +66,27 @@ export function highlightWords(text) {
             return <strong key={i}>{part}</strong>
         }
 
-        if (part.includes(placeholderMap[part])) {
-            const linkWord = placeholderMap[part]
-            ;<a
-                key={i}
-                href={linkWords[linkWord]}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                {linkWord}
-            </a>
-        }
+        const linkProcessedPart = part
+            .split(/(@__PLACEHOLDER_\d+__@)/g)
+            .map((linkPatternMatch, idx) => {
+                const linkWord = placeholderMap[linkPatternMatch]
 
-        return part
+                return linkWord !== undefined ? (
+                    <a
+                        key={idx}
+                        href={linkWords[linkWord]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline-animation"
+                    >
+                        {linkWord}
+                    </a>
+                ) : (
+                    <span key={idx}>{linkPatternMatch}</span>
+                )
+            })
+
+        return linkProcessedPart
     })
 
     return result
